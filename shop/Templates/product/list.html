@@ -1,0 +1,56 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  {% if category %}{{ category.name }}{% else %}Products{% endif %}
+{% endblock %}
+
+{% block content %}
+  <div id="sidebar">
+   <style>
+body {
+  background-image: url({% static "images/grass.jpg" %});
+}
+</style>
+  <img src="{% static "images/logo.png" %}" alt="logo"/>
+
+      <div style="float: right">{%  if user.is_authenticated %}
+            <li>Hello,{{ user.first_name }}</li>
+            <a href="accounts/logout" style="float: right; color:#fffa06;">Logout</a>
+
+            {% else %}
+
+          <A href="accounts/login" style="float: right; color:#fffa06;"><button type="button">login</button><br></A>        <br>
+          <div class="right"><A href="accounts/register" style="float: right; color:#fffa06;">New User?</A>
+          </div>{% endif %}</div>
+    <center><font color="white"><h1>Categories</h1>
+        <table style="width:75%">
+      <th {% if not category %}class="selected"{% endif %}>
+        <a href="{% url "shop:product_list" %}" style="color:#fffa06;">All</a>
+      </th>
+      {% for c in categories %}
+        <th {% if category.slug == c.slug %}class="selected"
+        {% endif %}>
+          <a href="{{ c.get_absolute_url }}" style="color:#fffa06;">{{ c.name }}</a>
+        </th>
+      {% endfor %}
+</table>
+</center>
+  </div>
+  <div id="main" class="product-list">
+    <h1>{% if category %}{{ category.name }}{% else %}Products
+    {% endif %}</h1>
+    {% for product in products %}
+      <div class="item">
+        <a href="{{ product.get_absolute_url }}" >
+          <img src="{% if product.image %}{{ product.image.url }}
+          {%else %}{% static "img/no_image.png" %}{% endif %}">
+        </a>
+        <a href="{{ product.get_absolute_url }}" style="color:#fffa06;">{{ product.name }}</a>
+        <br>
+        ${{ product.price }}
+      </div>
+    {% endfor %}
+  </div>
+    </font>
+{% endblock %}

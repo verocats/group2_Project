@@ -1,0 +1,106 @@
+{% extends "base.html"%}
+{% load	static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%	block	title	%}
+{%	if	category	%}{{category.name}}{%else%}Products{%	endif	%}
+{%	endblock	%}
+{%	block	content	%}
+
+    <div class="sidenav">
+        <h3 style="font-variant-caps: all-petite-caps;">Categories</h3>
+        <ul>
+            <li	{%	if not category	%}class="selected"{%	endif	%}>
+                <a	href="{%	url	"shop:product_list"	%}" style="font-variant-caps: all-petite-caps;">All</a>
+            </li>
+            {%	for	c	in categories	%}
+                <li	{%	if	category.slug == c.slug	%}class="selected"
+                       {%	endif	%}>
+                    <a	href="{{ c.get_absolute_url	}}" style="font-variant-caps: all-petite-caps;">{{ c.name}}</a>
+                </li>
+            {%	endfor	%}
+        </ul>
+
+    </div>
+	<div	id="main"	class="product-list">
+        <h1 style="font-variant-caps: all-petite-caps;">{%	if	category	%}{{category.name}}{%	else	%}Products
+        {%	endif	%}</h1>
+        {%	for	product	in products	%}
+            <div	class="item">
+            <div class="price">
+            <div class="box">
+                <a	href="{{product.get_absolute_url}}">
+                    <img src="{% if product.image %}{{ product.image.url }}
+                    {%else %}{% static "images/logo2.jpg" %}
+
+                    {% endif %}">
+
+                </a>
+            </div>
+            <div style="text-align: center;background-color: #003366;height: 10%;">
+            	<a	href="{{product.get_absolute_url}}" style="font-weight: bold;color: floralwhite;font-variant-caps: all-petite-caps;" >{{product.name}}</a></div>
+            <div style="text-align: center;font-weight: bolder;color: navy;font-size: x-large;">
+                ${{product.price}}
+                </div>
+            </div>
+            </div>
+        {%	endfor	%}
+    </div>
+    <style>
+        .sidenav {
+            float: left;
+            width: 15%;
+            margin-right: 70px;
+            margin-left: -50px;
+            position: relative;
+
+        }
+        .sidenav  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+        }
+        .sidenav li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        .sidenav li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        .product-list{
+            float: left;
+            width: 70%;
+        }
+    .item{
+        float: left;
+            width: 50%;
+        padding: 25px;
+    }
+    .price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+
+
+  height: 380px;
+  position: relative;
+}
+
+    .box{
+width: 100%;
+height: 300px;
+
+}
+img{
+width: 100%;
+height: 100%;
+}
+  </style>
+{%	endblock	%}

@@ -1,0 +1,40 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+
+{% block content %}
+   <style>
+body {
+  background-image: url({% static "images/grass.jpg" %});
+}
+</style>
+    <img src="{% static "images/logo.png" %}" alt="logo"/>
+
+      <div style="float: right">{%  if user.is_authenticated %}
+            <li>Hello,{{ user.first_name }}</li>
+            <a href="accounts/logout">Logout</a>
+
+            {% else %}
+
+          <A href="accounts/login" style="float: right; color:#fffa06;"><button type="button">login</button><br></A>        <br>
+          <div class="right"><A href="accounts/register" style="float: right; color:#fffa06;">New User?</A>
+          </div>{% endif %}</div>
+  <div class="product-detail">
+    <img src="{% if product.image %}{{ product.image.url }}{% else %}
+    {% static "img/no_image.png" %}{% endif %}">
+    <font color="white"><h1>{{ product.name }}</h1>
+    <h2><a href="{{ product.category.get_absolute_url }}" style="color:#fffa06;">
+
+        {{product.category }}</a></h2>
+    <p class="price">${{ product.price }}</p>
+    <form action="{% url "cart:cart_add" product.id %}" method="post" style="color:#fffa06;">
+        {{ cart_product_form }}
+        {% csrf_token %}
+        <input type="submit" value="Add to cart">
+    </form>
+        {{ product.description|linebreaks }}
+
+{% endblock %}</font>
