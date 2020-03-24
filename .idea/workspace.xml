@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee719395-1d6f-45d0-9080-aeba7c6d4eeb" name="Default Changelist" comment="" />
+    <list default="true" id="ee719395-1d6f-45d0-9080-aeba7c6d4eeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/productdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +37,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/DjangoProject-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -85,7 +90,12 @@
       <workItem from="1584988603390" duration="4000" />
       <workItem from="1584988855701" duration="60000" />
       <workItem from="1584988953300" duration="27000" />
-      <workItem from="1584989079658" duration="3650000" />
+      <workItem from="1584989079658" duration="5594000" />
+      <workItem from="1585068786305" duration="679000" />
+      <workItem from="1585069490973" duration="90000" />
+      <workItem from="1585069820362" duration="1999000" />
+      <workItem from="1585072141624" duration="175000" />
+      <workItem from="1585072358241" duration="1819000" />
     </task>
     <servers />
   </component>
@@ -93,17 +103,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1584821312773">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585069526915">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1584821312773" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1585069526915" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1585069579043">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585069579043" />
     <state x="144" y="0" key="SettingsEditor" timestamp="1584029564178">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584029564178" />
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1584988604402">
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1585069820879">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1584988604402" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585069820879" />
   </component>
 </project>
