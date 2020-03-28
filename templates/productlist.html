@@ -22,8 +22,13 @@
 
     </div>
 	<div	id="main"	class="product-list">
-        <h1 style="font-variant-caps: all-petite-caps;">{%	if	category	%}{{category.name}}{%	else	%}Products
-        {%	endif	%}</h1>
+
+
+    <h1 style="font-variant-caps: all-petite-caps;">{%	if	searchterm %} Search Results for "{{searchterm}}"
+    {% elif category %} {{ category.name }}
+    {%else%}Products{%	endif	%}
+</h1>
+    {%	if	products	%}
         {%	for	product	in products	%}
             <div	class="item">
             <div class="price">
@@ -44,6 +49,10 @@
             </div>
             </div>
         {%	endfor	%}
+    {%	else	%}<p style="margin-top: 2em;margin-left: 2em;font-size: 2em;color: crimson;
+    font-style: italic;
+    font-variant-caps: titling-caps;">No Products to display</p>
+    {%	endif	%}
     </div>
     <style>
         .sidenav {
