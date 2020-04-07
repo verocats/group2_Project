@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee719395-1d6f-45d0-9080-aeba7c6d4eeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cart/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/cart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/context_processors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/templates/cart/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myshop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/site-packages/crispy_forms/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/site-packages/crispy_forms/tests/test_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/12888440.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/12888440.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/30H8BBNT1L-2297_1.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/30H8BBNT1L-2297_1.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/30H8BBNT1L-2297_1_Rebcams.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/30H8BBNT1L-2297_1_Rebcams.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/30S0G0EL8U-2687_1.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/30S0G0EL8U-2687_1.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/NMV3GGY_au1017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/NMV3GGY_au1017.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/chanel-diamond-forever-handbag.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/chanel-diamond-forever-handbag.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/chanel-pink-sheepskin-leather-chain-shoulder-flap-bag1017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/chanel-pink-sheepskin-leather-chain-shoulder-flap-bag1017.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/download.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/download.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/2020/03/12/gucci-BROWN-ophidia-Shoulder-Bag.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/products/2020/03/12/gucci-BROWN-ophidia-Shoulder-Bag.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +100,9 @@
       <workItem from="1585677662288" duration="363000" />
       <workItem from="1585678071450" duration="13685000" />
       <workItem from="1585704377830" duration="854000" />
-      <workItem from="1585705715979" duration="10795000" />
+      <workItem from="1585705715979" duration="18221000" />
+      <workItem from="1586063126295" duration="8000" />
+      <workItem from="1586290931358" duration="884000" />
     </task>
     <servers />
   </component>
@@ -175,15 +140,15 @@
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584029564178" />
     <state x="169" y="0" key="SettingsEditor/0.0.1504.963@0.0.1504.963" timestamp="1585680050668" />
-    <state x="410" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1585705718174">
+    <state x="410" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1586290932064">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585426572822" />
-    <state x="410" y="239" key="com.intellij.ide.util.TipDialog/0.0.1504.963@0.0.1504.963" timestamp="1585705718174" />
-    <state x="415" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1585761083329">
+    <state x="410" y="239" key="com.intellij.ide.util.TipDialog/0.0.1504.963@0.0.1504.963" timestamp="1586290932064" />
+    <state x="415" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1585766633659">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="415" y="220" width="672" height="678" key="search.everywhere.popup/0.0.1504.963@0.0.1504.963" timestamp="1585761083329" />
+    <state x="415" y="220" width="672" height="678" key="search.everywhere.popup/0.0.1504.963@0.0.1504.963" timestamp="1585766633659" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
