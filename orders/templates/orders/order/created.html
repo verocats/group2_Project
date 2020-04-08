@@ -1,11 +1,18 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
   Thank you
 {% endblock %}
 
 {% block content %}
-  <h1>Thank you</h1>
-  <p>Your order has been successfully completed. Your order number is
+
+    <div style="    height: 25rem;background-repeat: no-repeat;background-size: cover;color: wheat;background-image: url({% static 'images/Success1.gif' %});">
+
+    <h1>Thank you</h1>
+      <p>Your order has been successfully completed. Your order number is
   <strong>{{ order.id }}</strong>.</p>
+</div>
+
+
+
 {% endblock %}
