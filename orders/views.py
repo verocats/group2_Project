@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
+from django.core.mail import send_mail, BadHeaderError
 
 def order_create(request):
     cart = Cart(request)
@@ -29,7 +30,9 @@ def order_create(request):
                 totalPrice += float(item['price']*item['quantity'])
             order.totalprice = totalPrice
             order.save()
-            # clear the cart
+            toaddresses= []
+            toaddresses.append(request.user.email)
+            send_mail('Order Placed Successfully', 'Hi '+order.last_name+'\n\nYour order of total $'+str(order.totalprice)+' has been successfully placed.\n\n Yours sincerely. \nEuropes Corner', request.user.email, toaddresses)
 
             cart.clear()
             return render(request,
