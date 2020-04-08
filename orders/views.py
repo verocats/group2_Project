@@ -16,6 +16,7 @@ def order_create(request):
         if form.is_valid():
             totalPrice = 0.00;
             order = form.save(commit=False)
+            order.customerid = request.user.id
             order.totalprice = totalPrice
             order.email = request.user.email
 
@@ -41,7 +42,7 @@ def order_create(request):
                   {'cart': cart, 'form': form})
 
 def order_list(request):
-    orders = Order.objects.filter(email=request.user.email)
+    orders = Order.objects.filter(customerid=request.user.id)
     return render(request,
                   'MyOrders.html',
                   {'orders': orders})

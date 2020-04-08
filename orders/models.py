@@ -18,6 +18,7 @@ class Order(models.Model):
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
     totalprice = models.DecimalField(max_digits=10, decimal_places=2)
+    customerid = models.CharField(max_length=100)
     #author = models.ForeignKey(User, null=True, blank=True)
 
 

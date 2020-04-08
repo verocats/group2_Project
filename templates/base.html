@@ -103,6 +103,8 @@ background-image: url('https://www.transparenttextures.com/patterns/brick-wall-d
               aria-labelledby="userMenu">
                 <a class="dropdown-item" href="{% url 'password_change'%}" style="color: #003366;"><b>Change password</b></a>
                 <div class="dropdown-divider"></div>
+<a class="dropdown-item" href="{% url 'Info_edit' user.pk %}" style="color: #003366;"><b>Change Personal Information</b></a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'orders:order_list'%}" style="color: #003366;"><b>My Orders</b></a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}" style="color: #003366;">

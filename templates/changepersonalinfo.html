@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+<style>
+
+</style>
+{% block title %}Change Personal Info{% endblock title %}
+
+{% block content %}
+<h2 style="font-variant-caps: all-petite-caps;">Change Personal Information</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form|crispy }}
+    <br>
+    <button class="btn btn-success" style="background-color: #003366;border: currentColor" type="submit"><b>Update</b></button>
+</form>
+{% endblock content %}
+</html>
