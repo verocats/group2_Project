@@ -25,7 +25,7 @@
                 {% else %}{% static 'img/no_image.png' %}{% endif %}">
               </a></td>
     <td>{{orderitem.quantity}}</td>
-    <td>{{orderitem.price}}</td>
+    <td>{% widthratio orderitem.price 1 orderitem.quantity %}</td>
   </tr>
 
         {%	endfor	%}
