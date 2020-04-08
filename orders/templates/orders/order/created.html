@@ -5,13 +5,16 @@
 {% endblock %}
 
 {% block content %}
+      <p style="font-size: x-large;
+    font-weight: bold;
+    font-style: oblique;
+    /* font-stretch: extra-condensed; */
+    color: darkgreen;">Your order has been successfully completed. Your order number is
+  <strong style="color:crimson;">{{ order.id }}</strong>.</p>
+    <br>
+    <img src="{% static "images/Success4.gif" %}" alt="logo"/>
 
-    <div style="    height: 25rem;background-repeat: no-repeat;background-size: cover;color: wheat;background-image: url({% static 'images/Success1.gif' %});">
 
-    <h1>Thank you</h1>
-      <p>Your order has been successfully completed. Your order number is
-  <strong>{{ order.id }}</strong>.</p>
-</div>
 
 
 
