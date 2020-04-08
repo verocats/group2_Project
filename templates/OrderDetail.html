@@ -1,0 +1,64 @@
+
+{% extends "base.html"%}
+{% load	static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{%	block	content	%}
+
+
+
+
+
+    <h1 style="font-variant-caps: all-petite-caps;">Order Details
+</h1>
+    {%	if	orderitems	%}
+        <table id="orders">
+            <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+                {%	for	orderitem	in orderitems	%}
+            <tr>
+    <td style="width: 40%;"><a href="{{ orderitem.product.get_absolute_url }}">
+                <img style="width: 100%;height: 300px" src="{% if orderitem.product.image %}{{ orderitem.product.image.url }}
+                {% else %}{% static 'img/no_image.png' %}{% endif %}">
+              </a></td>
+    <td>{{orderitem.quantity}}</td>
+    <td>{{orderitem.price}}</td>
+  </tr>
+
+        {%	endfor	%}
+    {%	else	%}<p style="margin-top: 2em;margin-left: 2em;font-size: 2em;color: crimson;
+    font-style: italic;
+    font-variant-caps: titling-caps;">No Order Items Available</p>
+    {%	endif	%}
+</table>
+
+
+<style>
+#orders {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#orders td, #orders th {
+  border: 1px solid black;
+  padding: 8px;
+    text-align: center;
+}
+
+#orders tr {background-color: #f2f2f2;}
+
+#orders tr:hover {background-color: #ddd;}
+
+#orders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+}
+</style>
+{%	endblock	%}

@@ -1,0 +1,60 @@
+
+{% extends "base.html"%}
+{% load	static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{%	block	content	%}
+
+
+
+
+
+    <h1 style="font-variant-caps: all-petite-caps;">My Orders
+</h1>
+    {%	if	orders	%}
+        <table id="orders">
+            <tr>
+            <th>Order Number</th>
+            <th>Address</th>
+            <th>Order Total</th>
+          </tr>
+                {%	for	order	in orders	%}
+            <tr>
+    <td><a	href="{% url 'orders:order_detail' pk=order.pk %}"  style="color: royalblue">{{order.id}}</a></td>
+    <td>{{order.address}}</td>
+    <td>{{order.totalprice}}</td>
+  </tr>
+
+        {%	endfor	%}
+    {%	else	%}<p style="margin-top: 2em;margin-left: 2em;font-size: 2em;color: crimson;
+    font-style: italic;
+    font-variant-caps: titling-caps;">No Orders placed</p>
+    {%	endif	%}
+</table>
+
+
+<style>
+#orders {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#orders td, #orders th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+#orders tr {background-color: #f2f2f2;}
+
+#orders tr:hover {background-color: #ddd;}
+
+#orders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: grey;
+  color: white;
+}
+</style>
+{%	endblock	%}
