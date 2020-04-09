@@ -21,8 +21,22 @@
   </div>
 
   <form action="." method="post" class="order-form">
-    {{ form|crispy }}<br>
+    <div style="width:50%;float:left">
+<h3>Shipping Information</h3>
+  {{ form|crispy }}<br>
     <p><input class="btn btn-success" style="background-color: #003366;border: currentColor" type="submit" value="Place order"></p>
+    </div>
+    <div style="width:50%;float:left">
+    <h3>Payment Information</h3>
+    Credit Card Number*<br>
+    <input type="number" required><br>
+    CVV*<br>
+     <input type="number" required><br>
+    Expiry Month*<br>
+     <input type="number" required><br>
+    Expiry Year*<br>
+     <input type="number" required><br>
+        </div>
     {% csrf_token %}
   </form>
 {% endblock %}
