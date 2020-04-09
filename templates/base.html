@@ -77,9 +77,8 @@ background-image: url('https://www.transparenttextures.com/patterns/brick-wall-d
     right: 15%;">Cart(0)  </i>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-    <i class="fa badge" style="color:beige;font-size: 2em;position: absolute;
-    right: 12%;" value=0>&#xf07a;</i>
+   <a href="{% url "cart:cart_detail" %}"><i class="fa badge" style="margin-top: -1rem;color:beige;font-size: 2em;position: absolute;
+    right: 12%;" value='{{ cart.get_total_count}}'>&#xf07a;</i></a>
       {% endif %}
       <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbarCollapse" aria-controls="navbarCollapse"
