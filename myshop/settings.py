@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'users',
     'crispy_forms',
     'orders.apps.OrdersConfig',
-    'payment.apps.PaymentConfig',
 
 ]
 
@@ -139,17 +138,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'djangoproject4900@gmail.com'
 EMAIL_HOST_PASSWORD = 'nleezgbagfctphgy'
 EMAIL_USE_TLS = True
-
-# Braintree settings
-BRAINTREE_MERCHANT_ID = 'tcwvg3tmkd4xynzr'  # Merchant ID
-BRAINTREE_PUBLIC_KEY = 'h655hdfswtxdqm8s'   # Public Key
-BRAINTREE_PRIVATE_KEY = '305c646ea673736e1490d42b45a3fb3c'  # Private key
-
-from braintree import Configuration, Environment
-
-Configuration.configure(
-    Environment.Sandbox,
-    BRAINTREE_MERCHANT_ID,
-    BRAINTREE_PUBLIC_KEY,
-    BRAINTREE_PRIVATE_KEY
-)
