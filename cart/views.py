@@ -7,6 +7,7 @@ from django.views.decorators.http import require_POST
 from shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
+from django.core.mail import send_mail, BadHeaderError
 
 @require_POST
 def cart_add(request, product_id):
@@ -33,4 +34,7 @@ def cart_detail(request):
                           initial={'quantity': item['quantity'],
                           'update': True})
     return render(request, 'cart/detail.html', {'cart': cart})
+
+
+
 
