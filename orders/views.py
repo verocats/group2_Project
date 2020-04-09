@@ -4,6 +4,8 @@ from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
 from django.core.mail import send_mail, BadHeaderError
+from django.urls import reverse
+from django.shortcuts import render, redirect
 
 def order_create(request):
     cart = Cart(request)
@@ -33,6 +35,13 @@ def order_create(request):
             toaddresses= []
             toaddresses.append(request.user.email)
             send_mail('Order Placed Successfully', 'Hi '+order.last_name+'\n\nYour order of total $'+str(order.totalprice)+' has been successfully placed.\n\n Yours sincerely. \nEuropes Corner', request.user.email, toaddresses)
+
+            # launch asynchronous task
+            order_created.delay(order.id)
+            # set the order in the session
+            request.session['order_id'] = order.id
+            # redirect for payment
+            return redirect(reverse('payment:process'))
 
             cart.clear()
             return render(request,

@@ -19,6 +19,7 @@ class Order(models.Model):
     paid = models.BooleanField(default=False)
     totalprice = models.DecimalField(max_digits=10, decimal_places=2)
     customerid = models.CharField(max_length=100)
+    braintree_id = models.CharField(max_length=150, blank=True)
     #author = models.ForeignKey(User, null=True, blank=True)
 
 
