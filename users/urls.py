@@ -7,4 +7,6 @@ urlpatterns = [
     path('<int:pk>/edit/',
          UserUpdateView.as_view(), name='Info_edit'),
     path('success/',views.success,name='success'),
+
+
 ]

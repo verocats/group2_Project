@@ -10,6 +10,8 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn btn-success" style="background-color: #003366;border: currentColor" type="submit"><b>Log In</b></button>
+    <a href="{% url 'password_reset' %}" class="btn btn-primary" style="background-color: #003366;border: currentColor" >
+            Forgot Password</a>
 </form>
 {% endblock content %}
 </html>
