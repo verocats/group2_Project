@@ -5,6 +5,7 @@ from .models import Category, Product
 from django.db.models import Q
 from cart.forms import CartAddProductForm
 
+
 def product_list(request, category_slug=None):
     category = None
     search_term = None
@@ -25,6 +26,26 @@ def product_list(request, category_slug=None):
                    'products': products,
                    'searchterm': search_term})
 
+def product_filter(request, category_slug=None):
+    category = None
+    search_term = None
+    categories = Category.objects.all()
+    pricerange = request.POST.get("drop1")
+    products = Product.objects.filter(available=True)
+    if(pricerange == '0-500'):
+        products = Product.objects.filter(price__range=[0,500])
+    elif(pricerange == '500-1000'):
+        products = Product.objects.filter(price__range=[500,1000])
+    elif(pricerange == '>1000'):
+        products = Product.objects.filter(price__range=[1000,10000])
+
+
+
+    return render(request,
+                  'productlist.html',
+                  {'categories': categories,
+                   'products': products,
+                   'pricerange': pricerange})
 
 def product_detail(request, id, slug):
     category = None
@@ -44,6 +65,8 @@ def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
     cart_product_form = CartAddProductForm()
     return render(request, 'productdetail.html', {'product': product,'cart_product_form': cart_product_form})
+
+
 
 
 
