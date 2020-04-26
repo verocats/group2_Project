@@ -21,11 +21,11 @@ height: 300px;" src="{% if product.image %}{{ product.image.url }}
 
     <p style="font-weight: bolder;font-size: x-large">${{ product.price }}</p>
     {% if user.is_authenticated %}
-    <form action="{% url 'cart:cart_add' product.id %}" method="post">
-      {{ cart_product_form }}
-      {% csrf_token %}
-      <input type="submit" value="Add to cart">
-    </form>
+      <form action="{% url 'cart:cart_add' product.id %}" method="post">
+        {{ cart_product_form }}
+        {% csrf_token %}
+        <input type="submit" value="Add to cart">
+      </form>
     {% endif %}
     <div style="font-family: cursive;
     font-style: italic;
