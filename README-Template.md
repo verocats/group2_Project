@@ -1,6 +1,5 @@
-# Project Title
+# Europes Corner
 
-Europes Corner
 
 ## Getting Started
 
